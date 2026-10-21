@@ -1,59 +1,49 @@
-# AngularTest
+# 🛒 Angular E-Commerce - Fake Store API
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.27.
+Aplicação de comércio eletrónico desenvolvida com **Angular (Modern Zoneless)**, focada em boas práticas de arquitetura frontend, reatividade com **Signals** e consumo de APIs REST.
 
-## Development server
+---
 
-To start a local development server, run:
+## 🚀 Tecnologias e Padrões Utilizados
 
-```bash
-ng serve
-```
+* **Angular (Standalone Components):** Arquitetura limpa sem `NgModule`.
+* **Modo Zoneless (`provideZonelessChangeDetection`):** Otimização de desempenho sem dependência do `zone.js`.
+* **Reatividade com Signals:**
+  * `signal()` para controlo de estado do carrinho.
+  * `computed()` para cálculo automático de quantidade total e valor monetário.
+  * `toSignal()` para conversão limpa de fluxos HTTP (`Observable`) em dados reativos de template.
+* **Modern Control Flow:** Uso nativo de `@if` e `@for ... track` para renderização eficiente de listas.
+* **Integração HTTP:** Comunicação com a [Fake Store API](https://fakestoreapi.com/) via `HttpClient`.
+* **TypeScript Estrito:** Tipagem robusta para modelos de domínio (`Product`, `CartItem`).
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+---
 
-## Code scaffolding
+## 📦 Funcionalidades
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- [x] Catálogo de produtos dinâmico com preços e imagens em grelha responsiva.
+- [x] Adição de produtos ao carrinho com persistência em memória global.
+- [x] Painel lateral (*Drawer*) para gestão de itens do carrinho.
+- [x] Incremento, decremento e remoção de produtos em tempo real.
+- [x] Cálculo reativo instantâneo do valor total da compra.
 
-```bash
-ng generate component component-name
-```
+---
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 🛠️ Como Executar Localmente
 
-```bash
-ng generate --help
-```
+1. Clone o repositório:
+   \`\`\`bash
+   git clone https://github.com/SEU-UTILIZADOR/angular-test.git
+   cd angular-test
+   \`\`\`
 
-## Building
+2. Instale as dependências:
+   \`\`\`bash
+   npm install
+   \`\`\`
 
-To build the project run:
+3. Inicie o servidor local:
+   \`\`\`bash
+   ng serve -o
+   \`\`\`
 
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+4. Aceda a `http://localhost:4200/` no seu navegador.
