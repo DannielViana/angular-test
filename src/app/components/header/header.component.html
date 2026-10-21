@@ -1,0 +1,6 @@
+<header class="navbar">
+  <h2>Angular Shop</h2>
+  <button class="cart-btn" (click)="onToggleCart.emit()">
+    🛒 Carrinho ({{ cartService.totalItems() }})
+  </button>
+</header>

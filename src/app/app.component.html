@@ -1,0 +1,9 @@
+<app-header (onToggleCart)="toggleCart()"></app-header>
+
+<main>
+  <app-product-list></app-product-list>
+</main>
+
+@if (isCartOpen()) {
+  <app-cart-drawer (onClose)="toggleCart()"></app-cart-drawer>
+}
